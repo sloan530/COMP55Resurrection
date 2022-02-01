@@ -124,6 +124,7 @@ public class MainApplication extends GraphicsProgram {
 		}
 	}
 	
+	
 	/* Doors
 	 * --------------------------------------------
 	 * setDoors()
@@ -318,7 +319,7 @@ public class MainApplication extends GraphicsProgram {
 	 * pauseMenu(GObject obj)
 	 * pause()
 	 * resume()
-	 */
+	 */ 
 	public void pauseMenu(GObject obj) {
 		if (obj == this.pauseButton) {
 			this.monsterTimer.stop();
@@ -345,6 +346,7 @@ public class MainApplication extends GraphicsProgram {
 		this.remove(quitImg);
 		paused = false;
 	}
+	
 	
 	/* Labels
 	 * -----------------------

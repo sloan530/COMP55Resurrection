@@ -19,18 +19,28 @@ public class NewGamePane extends GraphicsPane implements ActionListener {
 	private int playerX = 482, playerY = 510;
 	private ArrayList <GRect> walls = new ArrayList <GRect>(); 
 	private GLabel goal = null;	
+	private TileMap livingroomMap;
+	
+	
+	
+	
+	
+	
+	
 	
 	public NewGamePane(MainApplication app) {
 		this.program = app;
-		setWalls();
+		//setWalls();
+		livingroomMap = new TileMap(program, "res/livingroom.txt");
 	}	
 		
 	@Override
 	public void showContents() {
+		livingroomMap.show();
 		//1. walls
-		for (int i=0; i<walls.size(); i++) {program.add(walls.get(i));}
+		//for (int i=0; i<walls.size(); i++) {program.add(walls.get(i));}
 		//2. background image
-		program.add(background);
+		//program.add(background);
 		//3. doors
 		program.Doors(true,MapType.LIVINGR);
 		//4. player and monster and npc and Goal Label
@@ -163,5 +173,9 @@ public class NewGamePane extends GraphicsPane implements ActionListener {
 		GRect npc = new GRect(540, 450, 32, 32);
 		npc.setVisible(false);
 		walls.add(npc);
+	}
+	
+	public void readTileMap() {
+		
 	}
 }
